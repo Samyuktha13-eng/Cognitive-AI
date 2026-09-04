@@ -4,7 +4,7 @@
 
 const CONFIG = {
     // Backend API URL
-    BACKEND_URL: 'http://127.0.0.1:8000',
+    BACKEND_URL: 'https://cognitive-ai-q1ib.onrender.com',
 
     ASSET_ALIASES: {
         mother_lakshmi: 'patient_lakshmi',
