@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lakshmi's Memory Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="app-shell">
+        <header class="topbar">
+            <div class="brand-mark" aria-hidden="true">CA</div>
+            <div><p class="eyebrow">Cognitive AI</p><h1>LAKSHMI'S MEMORY JOURNEY</h1></div><button id="voice-button" class="voice-button" type="button" aria-label="Start Meera's voice">🔊 Start voice</button>
+            <div id="memory-indicator" class="memory-indicator" aria-label="Memory moments">Memory Moments <span>🤍</span><span>🤍</span><span>🤍</span><span>🤍</span><span>🤍</span></div>
+        </header>
+        <section id="loading" class="screen active" aria-live="polite"><div class="loading-content"><div class="loading-orbit"></div><p class="eyebrow">A gentle moment</p><h2>Opening Miss Lakshmi's memories</h2><p>Preparing a quiet journey together.</p></div></section>
+        <section id="conversation-screen" class="screen" aria-live="polite">
+            <div class="conversation-layout">
+                <div class="companion-column"><div class="companion-avatar" aria-hidden="true">🤗</div><p class="eyebrow">Your companion</p><h2>Meera</h2><p class="companion-note">Here with you, slowly.</p><div id="audio-status" class="audio-status">Voice ready</div></div>
+                <article class="memory-page">
+                    <div class="journey-heading"><div><p id="stage-label" class="eyebrow">Welcome</p><h2 id="stage-title">Namaskaram, Miss Lakshmi!</h2></div><div id="stage-count" class="stage-count">A gentle journey</div></div>
+                    <div id="media-frame" class="media-frame"><video id="memory-video" class="memory-video" controls playsinline preload="metadata"></video><img id="memory-image" class="memory-image" alt="A Lakshmi family memory"><div id="media-placeholder" class="media-placeholder"><span aria-hidden="true">🌸</span><p id="media-placeholder-text">Your memory will appear here.</p></div></div>
+                    <div class="assistant-card"><div class="assistant-icon" aria-hidden="true">◌</div><p id="assistant-text">Hi Lakshmi garu... how are you?</p></div>
+                    <div id="question-card" class="question-card"><p class="eyebrow">A little question</p><h3 id="question-text">When you are ready, tell me in your own words.</h3><p id="listening-status" class="listening-status">Tap the microphone and speak naturally.</p><div id="transcript" class="transcript" aria-live="polite"></div><button id="mic-button" class="mic-button" type="button" aria-label="Speak answer"><span aria-hidden="true">🎙️</span><strong>Speak Answer</strong></button><div id="fallback-actions" class="fallback-actions" hidden></div><div id="text-fallback" class="text-fallback" hidden><label for="typed-answer">Or tell me here</label><div><input id="typed-answer" type="text" autocomplete="off"><button id="send-typed-answer" type="button">Send</button></div></div></div>
+                    <div id="conversation-feedback" class="conversation-feedback" hidden></div><div id="journey-actions" class="journey-actions"></div>
+                </article>
+            </div>
+        </section>
+        <section id="results-screen" class="screen"><div class="results-content"><div class="final-flower" aria-hidden="true">🌸</div><p class="eyebrow">Beautiful Memories</p><h2>Thank you, Lakshmi garu.</h2><div class="final-moments">❤️ ❤️ ❤️ ❤️ ❤️</div><p id="final-message">Chaala baaga gurthupettukunnaru, Lakshmi garu.</p><button id="replay-button" class="btn btn-primary" type="button">Begin again</button></div></section>
+        <section id="error-screen" class="screen"><div class="error-content"><p class="eyebrow">A small pause</p><h2>We couldn't open the album.</h2><p id="error-message"></p><button class="btn btn-primary" onclick="location.reload()">Open again</button></div></section>
+    </main>
+    <audio id="background-music" src="/audio/background.mp3" loop preload="none"></audio>
+    <script src="config.js"></script><script src="animation-manager.js"></script><script src="app.js"></script>
+</body>
+</html>

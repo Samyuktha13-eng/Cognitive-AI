@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.venv/
+.env
+backend/.env
+generated_videos/
+backend/generated_videos/
+*.log
