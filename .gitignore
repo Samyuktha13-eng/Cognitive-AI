@@ -4,5 +4,4 @@ __pycache__/
 .env
 backend/.env
 generated_videos/
-backend/generated_videos/
 *.log
