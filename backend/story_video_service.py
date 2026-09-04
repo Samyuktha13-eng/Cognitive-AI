@@ -114,8 +114,12 @@ def get_story_definition(scene_limit=None):
         image_path = resolve_scene_image(scene)
         cache_key = make_cache_key(scene, image_path, "ltx-2.3")
         cached_file = Path(cache[cache_key]["file"]) if cache_key in cache else None
+        known_video = VIDEO_DIR / VIDEO_FILENAMES.get(scene.get("id"), f"{scene.get('id')}.mp4")
+
         if cached_file and cached_file.exists():
             payload_scenes.append(build_scene_payload(scene, cached_file, cached=True))
+        elif known_video.exists():
+            payload_scenes.append(build_scene_payload(scene, known_video, cached=False))
         else:
             payload_scenes.append(build_scene_payload(scene, None, cached=False))
 
