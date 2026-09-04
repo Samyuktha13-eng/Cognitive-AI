@@ -56,7 +56,7 @@ async def generate_video(request: VideoGenerateRequest):
         raise HTTPException(status_code=500, detail=str(exc))
 
 
-@router.api_route("/story/lakshmi-anu", methods=["GET", "POST"])
+@router.post("/story/lakshmi-anu")
 async def generate_lakshmi_anu_story(limit: int | None = Query(default=None, ge=1)):
     try:
         resolution = os.getenv("MAGIC_HOUR_DEFAULT_RESOLUTION", "480p")
